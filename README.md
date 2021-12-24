@@ -3,4 +3,6 @@
  - [x] Finding kernel32.dll address
  - [ ] Resolving function symbols
  - [ ] Loading DLLs
- - [ ] Spawning reverse shells
+ - [ ] Spawning processes
+ - [ ] Reverse shells
+ - [ ] Bind shells
