@@ -5,6 +5,6 @@
  - [ ] Resolving function symbols
  - [ ] Loading DLLs
  - [ ] Spawning processes
- - [ ] Reverse shells
- - [ ] Bind shells
+ - [ ] Launching Reverse shells
+ - [ ] Launching Bind shells
  - [ ] Staged payloads
